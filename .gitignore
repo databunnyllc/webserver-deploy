@@ -1,4 +1,4 @@
-.terraform
-*.terraform.tfstate.backup
-*.terraform.tfstate
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
 to_do.md
