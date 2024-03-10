@@ -17,6 +17,10 @@ resource "aws_instance" "webserver" {
   credit_specification {
     cpu_credits = "unlimited"
   }
+
+  tags = {
+    Name = "webserver"
+  }
 }
 
 # Create elastic ip association for the webserver
