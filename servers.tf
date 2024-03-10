@@ -19,10 +19,14 @@ resource "aws_instance" "webserver" {
   }
 }
 
+# Create elastic ip association for the webserver
+
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.webserver.id
   allocation_id = aws_eip.public_ip.id
 }
+
+# Create elastic ip 
 resource "aws_eip" "public_ip" {
   domain = "vpc"
 }
